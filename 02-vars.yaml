@@ -5,11 +5,13 @@
   tasks: 
     - name: Printing URL 
       ansible.builtin.debug:
-        msg: {{URL}}
+        msg: "{{URL}}"
 
     - name: Printing URL 
       ansible.builtin.debug:
-        msg: value of URL is {{URL}}
+        msg: value of URL is {{URL}} 
+      vars:                               # Declaring the variable at task level ( Local variable )
+        URL: task.google.com
 
 # How do your print a variable in bash ????  ${varName}
 # To print a vairable in yaml, we will {{varName}}
