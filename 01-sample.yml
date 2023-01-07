@@ -8,3 +8,6 @@
     - name: Printing hello from task2 of play1  
       ansible.builtin.debug:
         msg: Hello from task2  
+
+
+# debug : ansible module name to print something : equivlent to echo on bash
