@@ -5,7 +5,7 @@
   tasks: 
     - name: Printing URL 
       ansible.builtin.debug:
-        msg: "{{URL}}"
+        msg: {{URL}}
 
     - name: Printing URL 
       ansible.builtin.debug:
