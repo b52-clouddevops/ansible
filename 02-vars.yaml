@@ -1,0 +1,18 @@
+- name: Demo on using variables   
+  hosts: all
+  vars:                                    # Delcaring variables at play level; All tasks of the play can access this variable URL 
+    URL: play.google.com
+  tasks: 
+    - name: Printing URL 
+      ansible.builtin.debug:
+        msg: "{{URL}}"
+
+    - name: Printing URL 
+      ansible.builtin.debug:
+        msg: value of URL is {{URL}}
+
+# How do your print a variable in bash ????  ${varName}
+# To print a vairable in yaml, we will {{varName}}
+
+# Varaible name has to be enclosed in quotes only if it's the only entity in the msg, if not you don't have to place them in quotes. 
+
