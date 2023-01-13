@@ -7,4 +7,4 @@
 
     - name: Prinint OUT Variable 
       ansible.builtin.debug:
-        msg: "{{OUT}}"
+        msg: "{{OUT.stdout}}"
