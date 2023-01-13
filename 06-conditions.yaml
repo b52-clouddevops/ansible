@@ -2,7 +2,7 @@
   hosts: all
   vars:                                    
     actions: false
-    test: 1 
+    # test: 1 
   tasks: 
     - name: Run this on Centos Machines Only  
       ansible.builtin.debug:
@@ -21,8 +21,8 @@
 
     - name: Run this test variabe is declared  
       ansible.builtin.debug:
-        msg: test variable is defined
-      when: test is defined
+        msg: test variable is undefined
+      when: test is undefined
 
 
 
