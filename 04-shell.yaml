@@ -18,12 +18,6 @@
         msg: "{{STATUS}}" 
 
 
-    - name: Execute Tomcat Uptime Status Command 
-      ansible.builtin.shell: ps -ef  | grep tomcat | grep -v grep
-
-    - name: Prining Some Msg   
-      ansible.builtin.debug: 
-        msg: Hai
                          
 
 # How  to capture the exit code and preservre it in a variable, so that I can use it any where inside the script ?
