@@ -1,0 +1,14 @@
+#  A fact is nothing but a property of the machine / node extracted by the ansible server.
+
+
+
+- name: Demo on facts   
+  hosts: all 
+  tasks: 
+    - name: task1 
+      ansible.builtin.debug:
+        msg: OS Distribution = {{ansible_distribution}}
+
+    # - name: printing mac address 
+    #   ansible.builtin.debug:
+    #     msg: Hello from task2  
