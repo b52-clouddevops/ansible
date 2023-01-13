@@ -9,6 +9,6 @@
       ansible.builtin.debug:
         msg: OS Distribution = {{ansible_distribution}}
 
-    # - name: printing mac address 
-    #   ansible.builtin.debug:
-    #     msg: Hello from task2  
+    - name: printing mac address 
+      ansible.builtin.debug:
+        msg: Mac address is {{ansible_default_ipv4.macaddress}}
