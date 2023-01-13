@@ -3,7 +3,7 @@
   tasks: 
     - name: Prining a loop 
       ansible.builtin.debug:
-        msg: "Value in the loop is {{item}}""
+        msg: "Value in the loop is {{item}}"
       loop: 
         - 10 
         - 20
