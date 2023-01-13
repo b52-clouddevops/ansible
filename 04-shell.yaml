@@ -3,3 +3,5 @@
   tasks: 
     - name: Execute Shell Command 
       ansible.builtin.shell: uptime
+      register: OUT                          # Register captures the output of the shell command and preserves it in the variable with name of our choice.
+  
