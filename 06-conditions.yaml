@@ -1,7 +1,7 @@
 - name: Demo on using Conditions   
   hosts: all
   vars:                                    
-    action: true
+    actions: true
   tasks: 
     - name: Run this on Centos Machines Only  
       ansible.builtin.debug:
@@ -11,4 +11,9 @@
     - name: Run this on Ubuntu Machines Only  
       ansible.builtin.debug:
         msg: Hai I am Ubuntu 
-      when: ansible_distribution == "Ubuntu"
+      when: ansible_distribution == "Ubuntu" 
+    
+    - name: Run this action  
+      ansible.builtin.debug:
+        msg: I will only run when Actions is true 
+      when: actions
