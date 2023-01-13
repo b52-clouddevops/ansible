@@ -18,7 +18,7 @@
         msg: "{{STATUS}}" 
 
 
-    - name: Execute Shell Command 
+    - name: Execute Tomcat Uptime Status Command 
       ansible.builtin.shell: ps -ef  | grep tomcat | grep -v grep
 
     - name: Prining Some Msg   
