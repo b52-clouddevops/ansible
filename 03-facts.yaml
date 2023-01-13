@@ -1,7 +1,5 @@
 #  A fact is nothing but a property of the machine / node extracted by the ansible server.
 
-
-
 - name: Demo on facts   
   hosts: all 
   tasks: 
