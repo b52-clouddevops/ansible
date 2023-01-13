@@ -1,7 +1,7 @@
 - name: Demo on privilege escalation   
   hosts: all 
+  become: yes                           # This is like executing the script as a root user : Just like sudo in linux
   tasks: 
-
     - name: Executing Shell Command  
       ansible.builtin.shell: id  
       register: OUT 
