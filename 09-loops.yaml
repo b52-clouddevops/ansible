@@ -11,4 +11,6 @@
         - 40
         - 50   
 
-# Values in the loop can be referred by the key word / variable item 
+# Values in the loop can be referred by the key word / variable item  : item is a  reserved keyword for ansible loop.
+# loop is also a key word 
+
