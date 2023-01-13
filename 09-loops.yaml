@@ -1,0 +1,14 @@
+- name: Demo On Loops   
+  hosts: all 
+  tasks: 
+    - name: Prining a loop 
+      ansible.builtin.debug:
+        msg: Value in the loop is "{{item}}"
+      loop: 
+        - 10 
+        - 20
+        - 30
+        - 40
+        - 50   
+
+# Values in the loop can be referred by the key word / variable item 
