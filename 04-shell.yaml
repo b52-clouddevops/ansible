@@ -5,6 +5,16 @@
       ansible.builtin.shell: uptime
       register: OUT                          # Register captures the output of the shell command and preserves it in the variable with name of our choice.
 
-    - name: Prinint OUT Variable 
+    - name: Prining OUT Variable 
       ansible.builtin.debug:
-        msg: "{{OUT.stdout}}"
+        msg: "{{OUT.stdout}}" 
+
+    - name: Declaring the variable 
+      ansible.builtin.set_fact: 
+        STATUS: "{{OUT.rc}}"
+
+    - name: Prining Exit Code  
+      ansible.builtin.debug:
+        msg: "{{STATUS}}" 
+
+# How  to capture the exit code and preservre it in a variable, so that I can use it any where inside the script ?
