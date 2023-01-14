@@ -24,7 +24,7 @@
   ansible.builtin.copy:                    # Copies the file from the files directory
     src: roboshop.conf  
     dest: /etc/nginx/default.d/roboshop.conf  
-  notify: Restart Nginx
+  notify: Restart Nginx                    #only when there is a change in the copy file, then only this handler will be called.
 
 - name: Starting frontend service 
   ansible.builtin.service:
