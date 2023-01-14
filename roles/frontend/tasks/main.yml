@@ -23,10 +23,14 @@
 - name: Coping Nginx Config 
   ansible.builtin.copy:                    # Copies the file from the files directory
     src: roboshop.conf  
-    dest: /etc/nginx/default.d/roboshop.conf
+    dest: /etc/nginx/default.d/roboshop.conf  
+  notify: Restart Nginx
 
-- name: Restart frontend service 
+- name: Starting frontend service 
   ansible.builtin.service:
     name: nginx
-    state: restarted
-    enabled: true 
+    state: started
+    enabled: true  
+
+#  When frontend service has to be restarted ?
+#  Whenever there is a change in the roboshop.conf, only then I need a restart
