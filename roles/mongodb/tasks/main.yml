@@ -1,0 +1,20 @@
+- name: Coping MongoDB Repo  
+  ansible.builtin.copy:                    # Copies the file from the files directory
+    src: mongodb.repo
+    dest: /etc/yum.repos.d/mongodb.repo
+
+- name: Install MongoDB
+  ansible.builtin.package:
+    name: mongodb-org
+    state: present  
+
+- name: Updating MongoDB Config
+  ansible.builtin.replace:
+    path: /etc/mongod.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+
+- name: Starting MongoDB
+  ansible.builtin.service:
+    name: mongod
+    state: started
