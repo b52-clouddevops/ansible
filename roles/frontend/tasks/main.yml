@@ -16,7 +16,7 @@
 
 - name: Coping the Frontend Content to Nginx Path 
   ansible.builtin.copy:
-    src: /tmp/frontend-main/static  
+    src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html/ 
     remote_src: yes                        # Since the source is on a remote machine, ensure you mention remote_src as yes 
 
