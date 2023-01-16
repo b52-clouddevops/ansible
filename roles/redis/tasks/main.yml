@@ -12,7 +12,8 @@
   ansible.builtin.replace:
     path: /etc/{{COMPONENT}}/{{COMPONENT}}.conf
     regexp: '127.0.0.1'
-    replace: '0.0.0.0'
+    replace: '0.0.0.0' 
+  notify:
 
 - name: Restarting service 
   ansible.builtin.service:
