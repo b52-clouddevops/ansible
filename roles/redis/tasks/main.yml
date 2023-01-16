@@ -16,7 +16,7 @@
 
 - name: Restarting service 
   ansible.builtin.service:
-    name: ""
+    name: "{{COMPONENT}}"
     state: restarted
     enabled: true  
 
