@@ -40,7 +40,7 @@
     dest: /etc/systemd/system/catalogue.service
 
 
-- name: Make sure a service unit is running
+- name: Restarting Service 
   ansible.builtin.systemd:
     state: started
     name: httpd
