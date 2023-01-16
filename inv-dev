@@ -10,5 +10,5 @@ catalogue-dev.roboshop.internal
 [redis]
 redis-dev.roboshop.internal 
 
-[redis]
+[user]
 redis-dev.roboshop.internal
