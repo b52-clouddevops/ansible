@@ -8,7 +8,7 @@
     name: redis-6.2.7
     state: present  
 
-- name: Updating MongoDB Config
+- name: Updating redis-6.2.7 Config
   ansible.builtin.replace:
     path: /etc/mongod.conf
     regexp: '127.0.0.1'
