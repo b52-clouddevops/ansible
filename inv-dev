@@ -11,4 +11,4 @@ catalogue-dev.roboshop.internal
 redis-dev.roboshop.internal 
 
 [user]
-redis-dev.roboshop.internal
+user-dev.roboshop.internal
