@@ -11,7 +11,7 @@
 - name: Restarting service 
   ansible.builtin.service:
     name: nginx
-    state: started
+    state: restarted
     enabled: true  
 
 - name: Set-Hostname
