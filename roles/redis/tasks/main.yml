@@ -2,3 +2,8 @@
   ansible.builtin.copy:                    # Copies the file from the files directory
     src: redis.repo
     dest: /etc/yum.repos.d/redis.repo
+
+- name: Installing Nginx
+  ansible.builtin.package:
+    name: nginx
+    state: present 
