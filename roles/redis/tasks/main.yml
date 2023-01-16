@@ -8,5 +8,11 @@
     name: redis-6.2.7
     state: present  
 
+- name: Starting frontend service 
+  ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: true  
+
 - name: Set-Hostname
   ansible.builtin.shell: set-hostname {{COMPONENT}} 
