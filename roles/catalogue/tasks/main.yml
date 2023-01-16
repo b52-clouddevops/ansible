@@ -32,7 +32,7 @@
 
 - name: Install node.js packages
   community.general.npm:
-    path: /app/location
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
 
 
 
