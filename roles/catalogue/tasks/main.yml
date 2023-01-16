@@ -22,7 +22,7 @@
     src: /tmp/{{COMPONENT}}-main/
     dest: /home/{{APPUSER}}/{{COMPONENT}}/
     owner: "{{APPUSER}}"
-    group: {{APPUSER}}
+    group: "{{APPUSER}}
 
 
 
