@@ -30,7 +30,10 @@
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}" 
 
-
+- name: Install "coffee-script" node.js package.
+  community.general.npm:
+    name: coffee-script
+    path: /app/location
 
 
 
