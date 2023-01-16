@@ -10,7 +10,7 @@
 
 - name: Restarting service 
   ansible.builtin.service:
-    name: nginx
+    name: redis
     state: restarted
     enabled: true  
 
