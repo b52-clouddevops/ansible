@@ -37,7 +37,7 @@
 - name: Coping Systemd service file
   ansible.builtin.copy:
     src: systemd.service 
-    dest: /home/{{APPUSER}}/{{COMPONENT}}/
+    dest: /etc/systemd/system/catalogue.service
     remote_src: yes
 
 
