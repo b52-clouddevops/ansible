@@ -8,7 +8,7 @@
     name: redis-6.2.7
     state: present  
 
-- name: Starting frontend service 
+- name: Restarting service 
   ansible.builtin.service:
     name: nginx
     state: started
