@@ -35,7 +35,7 @@
     path: /home/{{APPUSER}}/{{COMPONENT}}/
 
 - name: Coping Systemd service file
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: systemd.service 
     dest: /etc/systemd/system/catalogue.service
 
