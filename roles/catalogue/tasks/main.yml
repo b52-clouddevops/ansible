@@ -23,6 +23,7 @@
     dest: /home/{{APPUSER}}/{{COMPONENT}}/
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}"
+    
 
 
 
