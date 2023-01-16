@@ -87,4 +87,4 @@ A Task is a list of actions that you want to execute.
  ### files vs templates 
 
  Files : just copy the file as is 
- Templates: 
+ Templates: Copy the file along with the mentioned variables in the file as a part of the copy 
