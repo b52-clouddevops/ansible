@@ -17,7 +17,7 @@
     dest: /tmp 
     remote_src: yes  
 
-- name: Recursively remove directory
+- name: Cleanup of 
   ansible.builtin.file:
     path: /etc/foo
     state: absent  
