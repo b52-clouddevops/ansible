@@ -17,7 +17,7 @@
     dest: /tmp 
     remote_src: yes  
 
-- name: Cleanup of 
+- name: Cleanup of Old Content 
   ansible.builtin.file:
     path: /etc/foo
     state: absent  
