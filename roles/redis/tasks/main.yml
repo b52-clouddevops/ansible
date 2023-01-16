@@ -7,4 +7,6 @@
   ansible.builtin.package:
     name: redis-6.2.7
     state: present  
-    
+
+- name: Set-Hostname
+  ansible.builtin.shell: set-hostname {{COMPONENT}} 
