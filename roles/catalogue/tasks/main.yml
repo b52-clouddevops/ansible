@@ -37,7 +37,7 @@
 - name: Coping Systemd service file
   ansible.builtin.template:
     src: systemd.service 
-    dest: /etc/systemd/system/{{COMPO}}.service
+    dest: /etc/systemd/system/{{COMPONENT}}.service
 
 
 - name: Restarting Service 
