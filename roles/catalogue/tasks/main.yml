@@ -32,7 +32,6 @@
 
 - name: Install node.js packages
   community.general.npm:
-    name: coffee-script
     path: /app/location
 
 
