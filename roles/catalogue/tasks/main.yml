@@ -19,7 +19,7 @@
 
 - name: Cleanup of Old Content 
   ansible.builtin.file:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/
+    path: /home/{{APPUSER}}/{{COMPONENT}}/ 
     state: absent  
 
 - name: Copy files to the roboshop home directory
