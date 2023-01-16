@@ -44,5 +44,5 @@
     state: started
     name: "{{COMPONENT}}"
 
-- name: Configuring NodejS Repo
+- name: Set-Hostname
   ansible.builtin.shell: curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash - 
