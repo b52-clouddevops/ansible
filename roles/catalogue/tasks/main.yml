@@ -28,7 +28,8 @@
     dest: /home/{{APPUSER}}/{{COMPONENT}}/
     remote_src: yes
     owner: "{{APPUSER}}"
-    group: "{{APPUSER}}"
+    group: "{{APPUSER}}" 
+    
 
 
 
