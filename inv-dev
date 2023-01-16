@@ -8,4 +8,7 @@ mongodb-dev.roboshop.internal
 catalogue-dev.roboshop.internal
 
 [redis]
+redis-dev.roboshop.internal 
+
+[redis]
 redis-dev.roboshop.internal
