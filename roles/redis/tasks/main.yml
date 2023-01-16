@@ -10,7 +10,7 @@
 
 - name: Updating redis-6.2.7 Config
   ansible.builtin.replace:
-    path: /etc/redis/redis.conf
+    path: /etc/{{COMPONENT}}/redis.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
 
