@@ -37,10 +37,8 @@
          src: /var/log/mysqld.log 
       register: mysql_log  
 
-    - name: Declaring the fact in a variable 
-      ansible.builtin.set_fact: 
-        DEFAULT_PASS: "{{ mysql_log['content'] | b64decode | regex_findall('temporary password.*') | join(' ') |split(' ' ) | last }}" 
-            #  DEFAULT_PASS: "{{ mysql_log['content'] | b64decode | regex_findall('temporary password.*') | join(' ') }}" 
+#    - name: Change Default Password
+#      ansible.builtin.shell: mysql --connect-expired-password -uroot -p"{{ mysql_log['content'] | b64decode | regex_findall('temporary password.*') | join(' ') | split(' ') | last }}"  </tmp/root-pass.sql 
 
     - name: Printing the output 
       debug:
