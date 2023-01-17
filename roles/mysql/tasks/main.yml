@@ -21,14 +21,7 @@
       src: /var/log/mysqld.log 
   register: mysql_log 
 
-# - name: Declaring the fact in a variable 
-#   ansible.builtin.set_fact: 
-#      DEFAULT_PASS: "{{ mysql_log['content'] | b64decode | regex_findall('temporary password.*') | join(' ') |split(' ' ) | last }}" 
-#         #  DEFAULT_PASS: "{{ mysql_log['content'] | b64decode | regex_findall('temporary password.*') | join(' ') }}" 
 
-# - name: Printing the output 
-#   debug:
-#     msg: "{{DEFAULT_PASS}}"
 
 - name: Connecting using default password  
   block:
