@@ -28,7 +28,7 @@
   ignore_errors: yes 
   block:
     - name: Fetching Default Password                 # This task will be executed only when the status of failed is TRUE 
-      ansible.buildin.shell: grep "temporary password" /var/log/mysqld.log | awk '{print $NF}' 
+      ansible.builtin.shell: grep "temporary password" /var/log/mysqld.log | awk '{print $NF}' 
       register: DEFAULT_ROOT_PASSWORD  
 
     - name: Coping MySql Repo  
