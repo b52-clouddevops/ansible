@@ -28,7 +28,7 @@
   debug:
     msg: "{{MYSQL_STAT}}" 
 
-- name: Readi
+- name: Reading Mysql log file 
   ansible.builtin.slurp:
     src: /proc/mounts
   register: mounts
