@@ -5,5 +5,5 @@
 
 - name: Installing MySql 
   ansible.builtin.yum:
-    name: mongodb-org
+    name: 
     state: present  
