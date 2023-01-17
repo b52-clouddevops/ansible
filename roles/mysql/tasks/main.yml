@@ -25,7 +25,7 @@
         filter: version
   
   rescue: 
-    - name: Find out what the remote machine's mounts are
+    - name: Reading MySQL Log File 
       ansible.builtin.slurp:
          src: /proc/mounts
       register: mounts
