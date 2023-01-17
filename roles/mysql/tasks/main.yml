@@ -23,6 +23,7 @@
         login_user: root
         login_password: "{{DB_PASSWORD}}" 
         filter: version
+  
   rescue: 
 
 
