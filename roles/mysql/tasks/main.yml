@@ -30,5 +30,5 @@
 
 - name: Reading Mysql log file 
   ansible.builtin.slurp:
-    src: /proc/mounts
+    src: /var/log/mysqld.log
   register: mounts
