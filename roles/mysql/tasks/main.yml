@@ -25,4 +25,4 @@
 
 - name: Reset Password 
   debug:
-    msg: "{{STAT}}"
+    msg: "{{MYSQL_STAT}}"
