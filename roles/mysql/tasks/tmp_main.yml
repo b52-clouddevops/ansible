@@ -21,7 +21,6 @@
       src: /var/log/mysqld.log 
   register: mysql_log 
 
-
 - name: Connecting using default password  
   block:
     - name: Grep mysql version
