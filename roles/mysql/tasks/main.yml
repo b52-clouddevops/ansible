@@ -31,4 +31,4 @@
 - name: Reading Mysql log file 
   ansible.builtin.slurp:
     src: /var/log/mysqld.log
-  register: sql
+  register: sql_log
