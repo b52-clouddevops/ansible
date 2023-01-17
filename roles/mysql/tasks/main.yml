@@ -26,7 +26,7 @@
 
 
 
-
+# Block and rescue will work together; Rescue tasks will only be executed when the task in the block fail 
 
 # - name: Reset password block 
 #   when: MYSQL_STAT.failed
