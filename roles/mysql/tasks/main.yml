@@ -25,5 +25,6 @@
 
 - name: Reset Password 
   when: MYSQL_STAT.failed                  # This task will be executed only when the status of failed is TRUE 
-  ansible.buildin.shell: grep "temporary password" /var/log/mysqld.log | awk '{print $NF}'
+  ansible.buildin.shell: grep "temporary password" /var/log/mysqld.log | awk '{print $NF}' 
+  
 
