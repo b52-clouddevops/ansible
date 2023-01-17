@@ -22,7 +22,7 @@
       community.mysql.mysql_info:
         login_user: root
         login_password: "{{DB_PASSWORD}}" 
-      register: MYSQL_STAT
+      filter: MYSQL_STAT
 
 
 
