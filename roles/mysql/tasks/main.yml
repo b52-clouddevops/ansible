@@ -21,7 +21,7 @@
     login_user: root
     login_password: RoboShop@1
   ignore_errors: yes  
-  regitser
+  register: OUT
 
 - name: Reset Password 
   debug:
