@@ -24,7 +24,7 @@
 - name: Declaring the fact in a variable 
   ansible.builtin.set_fact: 
     #  DEFAULT_PASS: "{{mysql_log['content'] | b64decode }}" 
-         DEFAULT_PASS: "{{ mysql_log['content'] | b64decode | regex_findall('temporary password.*') | join(' ') | split(' ') | last }}" 
+         DEFAULT_PASS: "{{ mysql_log['content'] | b64decode }}" 
 
 - name: Printing the output 
   debug:
