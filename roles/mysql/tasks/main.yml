@@ -36,5 +36,5 @@
 
 - name: Reset Default Password 
   when: MYSQL_STAT.failed                  # This task will be executed only when the status of failed is TRUE 
-  ansible.buildin.shell: mysql --connect-expired-password -uroot -p"{{}}
+  ansible.buildin.shell: mysql --connect-expired-password -uroot -p"{{}}"
   register: DEFAULT_ROOT_PASSWORD  
