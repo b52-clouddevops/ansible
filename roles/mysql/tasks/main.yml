@@ -23,7 +23,7 @@
         login_user: root
         login_password: "{{DB_PASSWORD}}" 
         filter: version
-   
+   rescue: 
 
 
 # Block and rescue will work together; Rescue tasks will only be executed when the task in the block fail 
