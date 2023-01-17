@@ -25,7 +25,7 @@
 - name: Configuring Service
   include_role:
     name: common
-    tasks_from: download
+    tasks_from: config-svc
 
 - name: Set-Hostname
   ansible.builtin.shell: set-hostname {{COMPONENT}} 
