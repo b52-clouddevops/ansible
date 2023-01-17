@@ -4,6 +4,11 @@
     dest: /tmp 
     remote_src: yes  
 
+- name: Cleanup of Old Content 
+  ansible.builtin.file:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/ 
+    state: absent  
+
 - name: Copy files to the roboshop home directory
   ansible.builtin.copy:
     src: /tmp/{{COMPONENT}}-main/
