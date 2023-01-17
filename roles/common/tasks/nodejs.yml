@@ -14,7 +14,7 @@
 - name: Download and extracting the Component 
   include_role:
     name: common
-    tasks_from: create-user
+    tasks_from: download
 
 - name: Cleanup of Old Content 
   ansible.builtin.file:
