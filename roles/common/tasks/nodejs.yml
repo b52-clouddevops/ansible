@@ -22,7 +22,7 @@
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
 
-- name: Download and extracting the Component 
+- name: Configuring Service
   include_role:
     name: common
     tasks_from: download
