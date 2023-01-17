@@ -21,7 +21,7 @@
     - name: Grep mysql version
       community.mysql.mysql_info:
         login_user: root
-        login_password: RoboShop@1
+        login_password: 
       ignore_errors: yes  
       register: MYSQL_STAT
 
