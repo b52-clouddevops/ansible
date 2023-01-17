@@ -40,7 +40,7 @@
     - name: Coping Password File  
       ansible.builtin.copy:                    # Copies the file from the files directory
         src: "root-pass.sql"
-        dest: /tmp/ 
+        dest: /tmp/ root-pass.sql
 
 
    - name: Change Default Password
