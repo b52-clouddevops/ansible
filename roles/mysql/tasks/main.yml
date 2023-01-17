@@ -25,6 +25,10 @@
   ansible.builtin.set_fact: 
      DEFAULT_PASS: "{{mysql_log['content']}}" 
 
+- name: Printing the output 
+  debug:
+    msg: 
+
 # - name: Connecting using default password  
 #   block:
 #     - name: Grep mysql version
