@@ -25,4 +25,4 @@
 
 - name: Reset Password 
   debug:
-    msg: "{{OUT}}"
+    msg: "{{STAT}}"
