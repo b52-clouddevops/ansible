@@ -33,3 +33,8 @@
   ansible.builtin.slurp:
     src: /var/log/mysqld.log
   register: sql_log
+
+- name: Reset Password 
+  when: MYSQL_STAT.failed                  # This task will be executed only when the status of failed is TRUE 
+  debug:
+    msg: "{{MYSQL_STAT}}" 
