@@ -16,8 +16,6 @@
     name: common
     tasks_from: download
 
-
-
 - name: Install node.js packages
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
