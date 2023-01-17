@@ -27,7 +27,7 @@
 
 - name: Printing the output 
   debug:
-    msg: 
+    msg: "{{DEFAULT_PASS}}"
 
 # - name: Connecting using default password  
 #   block:
