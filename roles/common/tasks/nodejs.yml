@@ -6,10 +6,10 @@
     name: nodejs 
     state: present 
 
-- name: Creating the Application User Account 
-  ansible.builtin.user:
-    name: "{{APPUSER}}"
-    comment: roboshop service account 
+- name: Calling Nodejs Function
+  include_role:
+    name: common
+    tasks_from: nodejs
 
 - name: Download and extracting the Component 
   ansible.builtin.unarchive:
