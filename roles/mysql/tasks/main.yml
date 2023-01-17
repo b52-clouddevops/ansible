@@ -26,18 +26,18 @@
 - name: Reset password block 
   when: MYSQL_STAT.failed
   block:
-- name: Fetching Default Password 
-  when: MYSQL_STAT.failed                  # This task will be executed only when the status of failed is TRUE 
-  ansible.buildin.shell: grep "temporary password" /var/log/mysqld.log | awk '{print $NF}' 
-  register: DEFAULT_ROOT_PASSWORD  
+    - name: Fetching Default Password 
+      when: MYSQL_STAT.failed                  # This task will be executed only when the status of failed is TRUE 
+      ansible.buildin.shell: grep "temporary password" /var/log/mysqld.log | awk '{print $NF}' 
+      register: DEFAULT_ROOT_PASSWORD  
 
-- name: Coping MySql Repo  
-  ansible.builtin.copy:                    # Copies the file from the files directory
-    src: root-pass.sql
-    dest: /tmp/root-pass.sql 
-  when: MYSQL_STAT.failed  
+    - name: Coping MySql Repo  
+      ansible.builtin.copy:                    # Copies the file from the files directory
+        src: root-pass.sql
+        dest: /tmp/root-pass.sql 
+      when: MYSQL_STAT.failed  
 
-- name: Reset Default Password 
-  when: MYSQL_STAT.failed                  # This task will be executed only when the status of failed is TRUE 
-  ansible.buildin.shell: mysql --connect-expired-password -uroot -p"{{DEFAULT_ROOT_PASSWORD}}" < /tmp/root-pass.sql 
-  register: DEFAULT_ROOT_PASSWORD  
+    - name: Reset Default Password 
+      when: MYSQL_STAT.failed                  # This task will be executed only when the status of failed is TRUE 
+      ansible.buildin.shell: mysql --connect-expired-password -uroot -p"{{DEFAULT_ROOT_PASSWORD}}" < /tmp/root-pass.sql 
+      register: DEFAULT_ROOT_PASSWORD  
