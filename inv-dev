@@ -17,4 +17,4 @@ user-dev.roboshop.internal
 cart-dev.roboshop.internal
 
 [mysql]
-cart-dev.roboshop.internal
+mysql-dev.roboshop.internal
