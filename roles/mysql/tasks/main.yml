@@ -16,7 +16,9 @@
     state: started
     enabled: true  
 
-- name: Connecting using default password 
+- name: Connecting using default password  
+  block:
+  
   community.mysql.mysql_info:
     login_user: root
     login_password: RoboShop@1
