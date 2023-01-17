@@ -1,4 +1,4 @@
 - name: Calling Nodejs Function
   include_role:
     name: common
-    tasks_from: nodejs     # This is how we can 
+    tasks_from: nodejs     # This is how we can call a specific task from a role.
