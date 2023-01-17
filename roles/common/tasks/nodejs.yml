@@ -6,7 +6,7 @@
     name: nodejs 
     state: present 
 
-- name: Calling Nodejs Function
+- name: Creating Roboshop User
   include_role:
     name: common
     tasks_from: nodejs
