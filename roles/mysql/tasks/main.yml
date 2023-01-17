@@ -18,7 +18,7 @@
 
 - name: Connecting using default password  
   block:
-
+   - name:
     community.mysql.mysql_info:
       login_user: root
       login_password: RoboShop@1
