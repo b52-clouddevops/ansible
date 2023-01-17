@@ -29,7 +29,7 @@
     msg: "{{MYSQL_STAT}}" 
 
 - name: Reading Mysql log file 
-  when: MYSQL_STAT.failed 
+  when: MYSQL_STAT.failed
   ansible.builtin.slurp:
     src: /var/log/mysqld.log
   register: sql_log
