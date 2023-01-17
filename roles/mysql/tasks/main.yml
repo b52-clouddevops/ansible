@@ -16,7 +16,7 @@
     state: started
     enabled: true  
 
-- name: Collect all info except settings and users by root
+- name: Connecting using default password 
   community.mysql.mysql_info:
     login_user: root
     login_password: RoboShop@1
