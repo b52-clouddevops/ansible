@@ -24,5 +24,6 @@
   register: MYSQL_STAT
 
 - name: Reset Password 
+  when: failed
   debug:
     msg: "{{MYSQL_STAT}}"
