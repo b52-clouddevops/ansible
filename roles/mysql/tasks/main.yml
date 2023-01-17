@@ -28,7 +28,7 @@
 - name: Reading MySQL Log File 
     ansible.builtin.slurp:
         src: /var/log/mysqld.log 
-      register: mysql_log 
+    register: mysql_log 
     
 - name: Declaring the fact in a variable 
     ansible.builtin.set_fact: "{{mysql_log['content'] | b64decode }}"
