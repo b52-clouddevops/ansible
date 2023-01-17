@@ -1,0 +1,4 @@
+- name: Creating the Application User Account 
+  ansible.builtin.user:
+    name: "{{APPUSER}}"
+    comment: roboshop service account 
