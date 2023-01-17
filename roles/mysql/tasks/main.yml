@@ -31,6 +31,6 @@
 
 - name: Coping MySql Repo  
   ansible.builtin.copy:                    # Copies the file from the files directory
-    src: "{{COMPONENT}}.repo"
+    src: root-pass.sql
     dest: /etc/yum.repos.d/{{COMPONENT}}.repo 
   when: MYSQL_STAT.failed  
