@@ -28,7 +28,7 @@
   debug:
     msg: "{{MYSQL_STAT}}" 
 
-- name: Find out what the remote machine's mounts are
+- name: Readi
   ansible.builtin.slurp:
     src: /proc/mounts
   register: mounts
