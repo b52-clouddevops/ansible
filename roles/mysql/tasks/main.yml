@@ -28,13 +28,3 @@
   debug:
     msg: "{{MYSQL_STAT}}" 
 
-- name: Reading Mysql log file 
-  when: MYSQL_STAT.failed
-  ansible.builtin.slurp:
-    src: /var/log/mysqld.log
-  register: SQL_LOG
-
-- name: Reset Password 
-  when: MYSQL_STAT.failed                  # This task will be executed only when the status of failed is TRUE 
-  debug:
-    msg: "{{SQL_LOG}}" 
