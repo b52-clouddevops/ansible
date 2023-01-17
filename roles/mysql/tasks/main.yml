@@ -26,8 +26,8 @@
   
   rescue: 
     - name: Find out what the remote machine's mounts are
-    ansible.builtin.slurp:
-      src: /proc/mounts
+      ansible.builtin.slurp:
+       src: /proc/mounts
     register: mounts
 
 
