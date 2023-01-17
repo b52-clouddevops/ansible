@@ -7,4 +7,8 @@
   ansible.builtin.yum:
     name: mysql-community-server
     state: present  
-
+- name: Starting frontend service 
+  ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: true  
