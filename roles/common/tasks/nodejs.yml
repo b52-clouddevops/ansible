@@ -22,7 +22,10 @@
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
 
-
+- name: Download and extracting the Component 
+  include_role:
+    name: common
+    tasks_from: download
 
 - name: Set-Hostname
   ansible.builtin.shell: set-hostname {{COMPONENT}} 
