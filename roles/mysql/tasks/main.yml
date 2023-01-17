@@ -42,7 +42,6 @@
         src: "root-pass.sql"
         dest: /tmp/root-pass.sql
 
-
    - name: Change Default Password
      ansible.builtin.shell: mysql --connect-expired-password -uroot -p"{{ mysql_log['content'] | b64decode | regex_findall('temporary password.*') | join(' ') | split(' ') | last }}"  </tmp/root-pass.sql 
 
