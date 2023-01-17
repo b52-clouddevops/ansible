@@ -22,16 +22,7 @@
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
 
-- name: Coping Systemd service file
-  ansible.builtin.template:
-    src: systemd.service 
-    dest: /etc/systemd/system/{{COMPONENT}}.service
 
-- name: Restarting Service 
-  ansible.builtin.systemd:
-    state: started
-    name: "{{COMPONENT}}"
-    daemon_reload: yes
 
 - name: Set-Hostname
   ansible.builtin.shell: set-hostname {{COMPONENT}} 
