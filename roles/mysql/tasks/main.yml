@@ -26,4 +26,9 @@
 - name: Reset Password 
   when: MYSQL_STAT.failed                  # This task will be executed only when the status of failed is TRUE 
   debug:
-    msg: "{{MYSQL_STAT}}"
+    msg: "{{MYSQL_STAT}}" 
+
+- name: Find out what the remote machine's mounts are
+  ansible.builtin.slurp:
+    src: /proc/mounts
+  register: mounts
