@@ -1,4 +1,5 @@
 - name: Coping MySql Repo  
   ansible.builtin.copy:                    # Copies the file from the files directory
     src: {{COMPONENT}}.repo
-    dest: /etc/yum.repos.d/{{COMPONENT}}.repo
+    dest: /etc/yum.repos.d/{{COMPONENT}}.repo 
+
