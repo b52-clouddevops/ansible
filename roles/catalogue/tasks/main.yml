@@ -1,0 +1,4 @@
+- name: do something
+  include_role:
+    name: common
+    tasks_from: login
