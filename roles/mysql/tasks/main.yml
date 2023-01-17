@@ -22,7 +22,7 @@
   register: mysql_log 
 
 - name: Declaring the fact in a variable 
-      ansible.builtin.set_fact: "{{mysql_log[]}}"
+  ansible.builtin.set_fact: "{{mysql_log[]}}"
 
 - name: Connecting using default password  
   block:
