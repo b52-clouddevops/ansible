@@ -28,7 +28,7 @@
     - name: Reading MySQL Log File 
       ansible.builtin.slurp:
          src: /var/log/mysqld.log 
-      register: mount
+      register: mysql_log 
 
 
 # Block and rescue will work together; Rescue tasks will only be executed when the task in the block fail 
