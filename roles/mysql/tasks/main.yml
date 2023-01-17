@@ -17,8 +17,8 @@
     enabled: true  
 
 - name: Reading MySQL Log File 
-      ansible.builtin.slurp:
-         src: /var/log/mysqld.log 
+  ansible.builtin.slurp:
+      src: /var/log/mysqld.log 
       register: mysql_log 
 
 - name: Connecting using default password  
