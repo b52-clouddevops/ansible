@@ -21,7 +21,7 @@
     - name: Grep mysql version
       community.mysql.mysql_info:
         login_user: root
-        login_password: "{{}}"
+        login_password: "{{DB_PASSWORD}}"
       ignore_errors: yes  
       register: MYSQL_STAT
 
