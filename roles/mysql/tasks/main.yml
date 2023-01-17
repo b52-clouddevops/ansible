@@ -24,7 +24,7 @@
   register: MYSQL_STAT
 
 - name: Reset password block 
-  
+  when: MYSQL_STAT.failed
 
 - name: Fetching Default Password 
   when: MYSQL_STAT.failed                  # This task will be executed only when the status of failed is TRUE 
