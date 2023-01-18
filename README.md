@@ -108,4 +108,9 @@ roles-example/
 │   ├── inventory
 │   └── test.yml
 └── vars
-    └── main.yml
+    └── main.yml 
+
+
+### Limitation in this project
+
+---> Frontend UI Fails Intermittently ( which ensure you see no items or display of catalo)
