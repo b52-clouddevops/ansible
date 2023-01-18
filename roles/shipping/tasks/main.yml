@@ -15,5 +15,5 @@
     tasks_from: download 
 
 - name: Preparing Maven Artifact 
-  ansible.builtin.shell: mvn clean package && 
+  ansible.builtin.shell: mvn clean package && mv target/shipping-1.0.jar shipping.jar
   ignore_errors: yes 
