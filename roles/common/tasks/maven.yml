@@ -1,9 +1,7 @@
-- name: Installing Maven 
+- name: Install Maven
   ansible.builtin.yum:
-    name: 
-       - java-1.8.0-openjdk 
-       - maven
-    state: present 
+    name: maven
+    state: installed
 
 - name: Creating Roboshop User
   include_role:
