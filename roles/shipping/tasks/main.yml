@@ -4,4 +4,12 @@
        - maven 
     state: present 
 
- 
+- name: Creating Roboshop User
+  include_role:
+    name: common
+    tasks_from: create-user
+
+- name: Download and extracting the Component 
+  include_role:
+    name: common
+    tasks_from: download
