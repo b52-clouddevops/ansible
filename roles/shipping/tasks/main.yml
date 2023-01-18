@@ -15,5 +15,5 @@
     tasks_from: download 
 
 - name: Preparing Maven Artifact 
-  ansible.builtin.shell: echo "uninstall plugin validate_password;" | mysql -uroot -p"{{DB_PASSWORD}}"
+  ansible.builtin.shell: mvn clean package
   ignore_errors: yes 
