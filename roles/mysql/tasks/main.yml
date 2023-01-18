@@ -36,7 +36,8 @@
       register: mysql_log  
 
     - name: Copy root password change command 
-      ansible.builtin.copy
+      ansible.builtin.copy:
+        src: 
 
     - name: Changing the default password 
       ansible.builtn.shell: mysql --connect-expired-password -uroot -p"{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')| join(' ') | split(' ')| last}}"   <   /tmp/root-pass.sql
