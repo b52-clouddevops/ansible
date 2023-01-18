@@ -13,7 +13,7 @@
 - name: Starting MySQL service 
   ansible.builtin.service:
     name: mysqld
-    state: started
+    state: restarted
     enabled: true  
 
 - name: Reading MySQL Log File 
