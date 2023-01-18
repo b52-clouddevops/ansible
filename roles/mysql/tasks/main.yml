@@ -36,7 +36,7 @@
       register: mysql_log  
 
     - name: Changing the default password 
-      ansible.builtn.shell: mysql 
+      ansible.builtn.shell: mysql --connect-expired-password
 
 
     - name: Declare the facts 
