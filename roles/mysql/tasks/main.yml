@@ -19,10 +19,10 @@
 - name: Reset the password
   ansible.builtin.shell: mysql_secure_installation --set-root-pass RoboShop@1 
 
-- name: Reading MySQL Log File 
-  ansible.builtin.slurp:
-      src: /var/log/mysqld.log 
-  register: mysql_log 
+# - name: Reading MySQL Log File 
+#   ansible.builtin.slurp:
+#       src: /var/log/mysqld.log 
+#   register: mysql_log 
 
 # - name: Connecting using default password  
 #   block:
