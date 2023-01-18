@@ -52,7 +52,12 @@
     name: common
     tasks_from: download 
 
-
+- name: Restore database ignoring errors
+  community.mysql.mysql_db:
+    name: my_db
+    state: import
+    target: /tmp/dump.sql.bz2
+    force: yes
 
     # - name: Printing 
     #   ansible.builtin.debug:
