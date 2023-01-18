@@ -52,7 +52,7 @@
     name: common
     tasks_from: download 
 
-- name: Restore database ignoring errors
+- name: Injecting the schema
   community.mysql.mysql_db:
     name: my_db
     state: import
