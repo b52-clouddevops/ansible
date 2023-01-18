@@ -8,4 +8,4 @@
     state: started
     name: "{{COMPONENT}}"
     daemon_reload: yes
-    enabled: yes
+    enabled: true 
