@@ -16,8 +16,11 @@
     state: restarted
     enabled: true  
 
-- name: Reset the password
-  ansible.builtin.shell: mysql_secure_installation --set-root-pass RoboShop@1 
+- name: Reset MySQL Default Password
+  ansible.builtin.shell: mysql_secure_installation --set-root-pass {{root_mysql_password}}
+  register: out
+  ignore_errors: yes
+
 
 # - name: Reading MySQL Log File 
 #   ansible.builtin.slurp:
