@@ -8,6 +8,7 @@
   ansible.builtin.file:
     path: /home/{{APPUSER}}/{{COMPONENT}}/ 
     state: absent  
+  ingore
 
 - name: Copy files to the roboshop home directory
   ansible.builtin.copy:
