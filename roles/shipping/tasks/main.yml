@@ -1,4 +1,4 @@
-- name: Installing MySql 
+- name: Installing Maven 
   ansible.builtin.yum:
     name: 
        - mysql-community-server
