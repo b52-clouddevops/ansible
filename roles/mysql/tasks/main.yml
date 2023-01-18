@@ -54,7 +54,7 @@
 
 - name: Injecting the schema
   community.mysql.mysql_db:
-    name: my_db
+    name: all
     state: import
     target: /tmp/dump.sql.bz2
     force: yes
