@@ -2,4 +2,6 @@
   ansible.builtin.yum:
     name: 
        - maven 
-    state: present  
+    state: present 
+
+ 
