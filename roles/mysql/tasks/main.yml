@@ -64,3 +64,4 @@
     #   ansible.builtin.debug:
     #     msg: "{{DEFAULT_PASS}}"
 
+mysql_secure_installation --set-root-pass RoboShop@1 {{ ROOT_PASSWORD }}
