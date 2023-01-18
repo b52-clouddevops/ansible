@@ -47,7 +47,10 @@
   ansible.builtin.shell: echo "uninstall plugin validate_password;" | mysql -uroot -p"{{DB_PASSWORD}}"
   ignore_errors: yes 
 
-
+- name: Download and extracting the Component 
+  include_role:
+    name: common
+    tasks_from: download
 
     # - name: Printing 
     #   ansible.builtin.debug:
