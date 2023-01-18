@@ -16,4 +16,5 @@
 
 - name: Preparing Maven Artifact 
   ansible.builtin.shell: mvn clean package && mv target/{{COMPONENT}}-1.0.jar {{COMPONENT}}.jar
-  ignore_errors: yes 
+  args:
+    chdir: somedir/
