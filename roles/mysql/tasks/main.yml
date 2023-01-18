@@ -47,7 +47,7 @@
   ansible.builtin.shell: echo 
 
 
-uninstall plugin validate_password;
+
     # - name: Printing 
     #   ansible.builtin.debug:
     #     msg: "{{DEFAULT_PASS}}"
