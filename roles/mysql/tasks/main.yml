@@ -21,48 +21,48 @@
       src: /var/log/mysqld.log 
   register: mysql_log 
 
-- name: Connecting using default password  
-  block:
-    - name: Grep mysql version
-      community.mysql.mysql_info:
-        login_user: root
-        login_password: "{{DB_PASSWORD}}" 
-        filter: version
+# - name: Connecting using default password  
+#   block:
+#     - name: Grep mysql version
+#       community.mysql.mysql_info:
+#         login_user: root
+#         login_password: "{{DB_PASSWORD}}" 
+#         filter: version
   
-  rescue: 
-    - name: Reading MySQL Log File 
-      ansible.builtin.slurp:
-         src: /var/log/mysqld.log 
-      register: mysql_log  
+#   rescue: 
+#     - name: Reading MySQL Log File 
+#       ansible.builtin.slurp:
+#          src: /var/log/mysqld.log 
+#       register: mysql_log  
 
-    - name: Copy root password change command 
-      ansible.builtin.copy:
-        src: root-pass.sql 
-        dest: /tmp/root-pass.sql 
+#     - name: Copy root password change command 
+#       ansible.builtin.copy:
+#         src: root-pass.sql 
+#         dest: /tmp/root-pass.sql 
 
-    - name: Changing the default password 
-      # ansible.builtin.shell: mysql --connect-expired-password -uroot -p"{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')| join(' ') | split(' ')| last}}"   <   /tmp/root-pass.sql
-      # ansible.builtin.shell: mysql --connect-expired-password {{DB_PASSWORD}} 
-      ansible.builtin.shell: mysql_secure_installation --set-root-pass {{DB_PASSWORD}} | mysql --connect-expired-password -uroot -p"{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')| join(' ') | split(' ')| last}}"
+#     - name: Changing the default password 
+#       # ansible.builtin.shell: mysql --connect-expired-password -uroot -p"{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')| join(' ') | split(' ')| last}}"   <   /tmp/root-pass.sql
+#       # ansible.builtin.shell: mysql --connect-expired-password {{DB_PASSWORD}} 
+#       ansible.builtin.shell: mysql_secure_installation --set-root-pass {{DB_PASSWORD}} | mysql --connect-expired-password -uroot -p"{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')| join(' ') | split(' ')| last}}"
 
-- name: Uninstall password validate plugin 
-  ansible.builtin.shell: echo "uninstall plugin validate_password;" | mysql -uroot -p"{{DB_PASSWORD}}"
-  ignore_errors: yes 
+# - name: Uninstall password validate plugin 
+#   ansible.builtin.shell: echo "uninstall plugin validate_password;" | mysql -uroot -p"{{DB_PASSWORD}}"
+#   ignore_errors: yes 
 
-- name: Download and extracting the Component 
-  include_role:
-    name: common
-    tasks_from: download 
+# - name: Download and extracting the Component 
+#   include_role:
+#     name: common
+#     tasks_from: download 
 
-- name: Injecting the schema
-  community.mysql.mysql_db:
-    name: all_db 
-    state: import
-    target: /tmp/mysql-main/shipping.sql
-    login_user: root 
-    login_password: "{{DB_PASSWORD}}"
+# - name: Injecting the schema
+#   community.mysql.mysql_db:
+#     name: all_db 
+#     state: import
+#     target: /tmp/mysql-main/shipping.sql
+#     login_user: root 
+#     login_password: "{{DB_PASSWORD}}"
 
-    # - name: Printing 
-    #   ansible.builtin.debug:
-    #     msg: "{{DEFAULT_PASS}}"
+#     # - name: Printing 
+#     #   ansible.builtin.debug:
+#     #     msg: "{{DEFAULT_PASS}}"
 
