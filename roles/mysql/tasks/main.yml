@@ -36,7 +36,7 @@
       register: mysql_log  
 
     - name: Declare the facts 
-      ansible.builtin_set_fact: 
+      ansible.builtin.set_fact: 
           DEFAULT_PASS: "{{mysql_log['content']}}"
     
     - name: Printing 
