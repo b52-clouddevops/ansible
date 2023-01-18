@@ -37,7 +37,7 @@
 
     - name: Declare the facts 
       ansible.builtin.set_fact: 
-          DEFAULT_PASS: "{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')|join('') split(' ')}}"
+          DEFAULT_PASS: "{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')|join(' ') | split(' ')}}"
     
     - name: Printing 
       ansible.builtin.debug:
