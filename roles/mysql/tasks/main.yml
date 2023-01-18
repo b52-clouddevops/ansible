@@ -17,7 +17,7 @@
     enabled: true  
 
 - name: Reading MySQL Log File 
-  .slurp:
+  ansible.builtin.slurp:
       src: /var/log/mysqld.log 
   register: mysql_log 
 
