@@ -1,0 +1,4 @@
+- name: Calling Nodejs Function
+  include_role:
+    name: common
+    tasks_from: nodejs
