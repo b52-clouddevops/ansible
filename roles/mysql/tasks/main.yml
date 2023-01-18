@@ -57,7 +57,7 @@
     name: all_db 
     state: import
     target: /tmp/mysql-main/{{COMPONENT}}.sql
-
+    login_user: 
 
     # - name: Printing 
     #   ansible.builtin.debug:
