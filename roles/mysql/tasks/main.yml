@@ -56,7 +56,7 @@
   community.mysql.mysql_db:
     name: all_db 
     state: import
-    target: /tmp/mysql-main/{{COMPONENT}}.sql
+    target: /tmp/mysql-main/shipping.sql
     login_user: root 
     login_password: "{{DB_PASSWORD}}"
 
