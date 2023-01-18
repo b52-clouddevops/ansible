@@ -45,7 +45,7 @@
 
 - name: Uninstall password validate plugin 
   ansible.builtin.shell: echo "uninstall plugin validate_password;" | mysql -uroot -p"{{DB_PASSWORD}}"
-  
+  ig
 
 
 
