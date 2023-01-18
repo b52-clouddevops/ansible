@@ -36,7 +36,8 @@
       register: mysql_log  
 
     - name: Changing the default password 
-      
+      ansible.builtn.shell:
+        
 
     - name: Declare the facts 
       ansible.builtin.set_fact: 
