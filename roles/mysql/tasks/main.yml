@@ -39,7 +39,7 @@
       ansible.builtin.set_fact: 
           DEFAULT_PASS: "{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')| join(' ') | split(' ')| last}}"
     
-    - name: Printing 
-      ansible.builtin.debug:
-        msg: "{{DEFAULT_PASS}}"
+    # - name: Printing 
+    #   ansible.builtin.debug:
+    #     msg: "{{DEFAULT_PASS}}"
 
