@@ -44,7 +44,7 @@
       ansible.builtin.shell: mysql --connect-expired-password -uroot -p"{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')| join(' ') | split(' ')| last}}"   <   /tmp/root-pass.sql
 
 - name: Uninstall password validate plugin 
-  ansible.builtin.shell: ec | split(' ')| last}}"   <   /tmp/root-pass.sql
+  ansible.builtin.shell: echo 
 
 
 uninstall plugin validate_password;
