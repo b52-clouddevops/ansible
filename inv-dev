@@ -20,4 +20,4 @@ cart-dev.roboshop.internal
 mysql-dev.roboshop.internal
 
 [shipping]
-mysql-dev.roboshop.internal
+shipping-dev.roboshop.internal
