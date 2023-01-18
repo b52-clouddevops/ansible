@@ -43,7 +43,7 @@
     - name: Changing the default password 
       # ansible.builtin.shell: mysql --connect-expired-password -uroot -p"{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')| join(' ') | split(' ')| last}}"   <   /tmp/root-pass.sql
       # ansible.builtin.shell: mysql --connect-expired-password {{DB_PASSWORD}} 
-      ansible.builtin.shell: mysql_secure_installation --set-root-pass {{DB_PASSWORD}}
+      ansible.builtin.shell: mysql_secure_installation --set-root-pass {{DB_PASSWORD}} | mysql --connect-expired-password -uroot -p"{{mysql_log['content'] | b64decode | regex_findall('temporary password.*')| join(' ') | split(' ')| last}}"
 
 - name: Uninstall password validate plugin 
   ansible.builtin.shell: echo "uninstall plugin validate_password;" | mysql -uroot -p"{{DB_PASSWORD}}"
