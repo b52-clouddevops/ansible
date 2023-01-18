@@ -2,5 +2,4 @@
   ansible.builtin.yum:
     name: 
        - mysql-community-server
-       - MySQL-python
     state: present  
