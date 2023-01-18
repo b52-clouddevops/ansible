@@ -8,7 +8,7 @@
     name: redis-6.2.9
     state: present  
 
-- name: Updating redis-6.2.7 Config
+- name: Updating redis-6.2.9 Config
   ansible.builtin.replace:
     path: /etc/{{COMPONENT}}/{{COMPONENT}}.conf
     regexp: '127.0.0.1'
