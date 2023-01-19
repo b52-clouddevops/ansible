@@ -21,4 +21,4 @@
 
 - name: Installing python dependencies 
   ansible.builtin.pip:
-    requirements: /my_app/requirements.txt
+    requirements: /home/{{APPUSER}}
