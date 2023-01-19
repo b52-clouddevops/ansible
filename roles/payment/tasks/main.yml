@@ -15,4 +15,9 @@
 - name: Download and extracting the Component 
   include_role:
     name: common
-    tasks_from: download
+    tasks_from: download 
+
+- name: Installing python dependencies 
+  ansible.builtin.pip:
+    requirements: /home/{{APPUSER}}/{{COMPONENT}}/ 
+    executable: pip3
