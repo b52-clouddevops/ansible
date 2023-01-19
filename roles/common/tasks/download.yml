@@ -19,6 +19,6 @@
     group: "{{APPUSER}}" 
   ignore_errors: yes 
 
-- name: Install specified python requirements in indicated (virtualenv)
+- name: Installing python dependencies 
   ansible.builtin.pip:
     requirements: /my_app/requirements.txt
