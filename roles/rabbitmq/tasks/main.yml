@@ -9,7 +9,6 @@
     name: rabbitmq-server
     state: installed 
 
-
 - name: Starting RabbitMQ 
   ansible.builtin.systemd:
     name: rabbitmq-server 
