@@ -3,4 +3,4 @@
     name: "{{item}}"
     state: installed  
   loop:
-    - 
+    - python36 
