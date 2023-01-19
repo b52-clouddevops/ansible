@@ -17,4 +17,8 @@
     remote_src: yes
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}" 
-  ignore_errors: yes
+  ignore_errors: yes 
+
+- name: Install specified python requirements in indicated (virtualenv)
+  ansible.builtin.pip:
+    requirements: /my_app/requirements.txt
