@@ -20,5 +20,5 @@
 - name: Installing python dependencies 
   ansible.builtin.pip:
     requirements: /home/{{APPUSER}}/{{COMPONENT}}/ 
-    executable: pip3.3 
+    executable: pip3
   become_user: roboshop 
