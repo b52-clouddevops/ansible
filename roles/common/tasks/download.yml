@@ -19,9 +19,6 @@
     group: "{{APPUSER}}" 
   ignore_errors: yes 
 
-- name: Installing python dependencies 
-  ansible.builtin.pip:
-    requirements: /home/{{APPUSER}}/{{COMPONENT}}/ 
-    executable: pip3
+
 
   
