@@ -11,7 +11,7 @@
     state: installed 
     enabled: yes 
 
-- name: Restart MySQL Service
+- name: Starting RabbitMQ 
   ansible.builtin.systemd:
     name: mysqld
     state: restarted
