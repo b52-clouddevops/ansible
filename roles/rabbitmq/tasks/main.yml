@@ -20,7 +20,7 @@
 - name: Adding appuser to rabbitmq 
   community.rabbitmq.rabbitmq_user:
     user: roboshop
-    password: changeme
+    password: roboshop123
     vhost: /
     configure_priv: .*
     read_priv: .*
