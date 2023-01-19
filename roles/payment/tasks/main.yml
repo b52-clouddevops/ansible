@@ -5,3 +5,5 @@
   loop:
     - python36 
     - gcc
+    - python3-devel 
+    
