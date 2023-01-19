@@ -17,9 +17,7 @@
     state: restarted
     enabled: yes
 
-- name: |-
-    Add user to server and assign full access control on / vhost.
-    The user might have permission rules for other vhost but you don't care.
+- name: 
   community.rabbitmq.rabbitmq_user:
     user: joe
     password: changeme
