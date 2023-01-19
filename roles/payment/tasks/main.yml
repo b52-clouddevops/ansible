@@ -1,4 +1,4 @@
-- name: Installing  
+- name: Installing Python and  
   ansible.builtin.yum:
     name: rabbitmq-server
     state: installed 
