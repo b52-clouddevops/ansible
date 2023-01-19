@@ -1,4 +1,6 @@
 - name: Installing Python and dependencies  
   ansible.builtin.yum:
     name: "{{item}}"
-    state: installed 
+    state: installed  
+  loop:
+    - 
