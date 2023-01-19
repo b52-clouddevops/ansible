@@ -17,7 +17,7 @@
     state: restarted
     enabled: yes
 
-- name: 
+- name: Adding appuser to
   community.rabbitmq.rabbitmq_user:
     user: joe
     password: changeme
