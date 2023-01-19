@@ -4,3 +4,4 @@
     state: installed  
   loop:
     - python36 
+    - gcc
