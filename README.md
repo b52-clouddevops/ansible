@@ -119,4 +119,7 @@ roles-example/
 ### ansible-pull
 
 ```
-Whenever the infra is dynamic or not in a position to maintan the static inventory or whenever you want come some config-management to happen as a part of the boot-str
+Whenever the infra is dynamic or not in a position to maintan the static inventory or whenever you want come some config-management to happen as a part of the boot-strapping, prefer using ansible-pull. Ansible-pull expects ansible to be installed on the machine you're running.
+
+
+```
