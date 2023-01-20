@@ -1,3 +1,8 @@
+- name: Calling Maven Function
+  include_role:
+    name: common
+    tasks_from: maven
+
 - name: Installing Python and dependencies  
   ansible.builtin.yum:
     name: "{{item}}"
