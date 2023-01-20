@@ -1,6 +1,6 @@
 # Playbook which calls the roles
 - name: Configuring Roboshop Project 
-  hosts: "{{COMPONENT}}" 
+  hosts: localhost
   become: yes 
   roles:
     - "{{COMPONENT}}" 
