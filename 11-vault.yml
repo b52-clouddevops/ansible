@@ -1,6 +1,7 @@
 - name: Demo on vault  
   hosts: localhost              # Means telling to execute the playbook tasks on the ansible-controller itself 
-  vars
+  vars:
+    PASS
   tasks:  
     - name: Printing 
       debug: 
