@@ -1,7 +1,7 @@
 - name: Calling Python Function
   include_role:
     name: common
-    tasks_from: maven
+    tasks_from: pythin
 
 - name: Installing Python and dependencies  
   ansible.builtin.yum:
