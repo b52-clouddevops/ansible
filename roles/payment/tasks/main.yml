@@ -28,7 +28,6 @@
     regexp: '^gid'
     line: uid = {{APPUSER_INFO.group}}
 
-
 - name: Download and extracting the Component 
   include_role:
     name: common
