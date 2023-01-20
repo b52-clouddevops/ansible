@@ -16,7 +16,7 @@
   ansible.builtin.debug:
     msg:  "{{APPUSER_INFO}}"
 
-- name: Replace a localhost entry with our own
+- name: Updating the UID in the ini file 
   ansible.builtin.lineinfile:
     path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: '^uid'
