@@ -123,6 +123,6 @@ Whenever the infra is dynamic or not in a position to maintan the static invento
 
 So, the easiest option is to install ANSIBLE on the lab ami and keep it ready and prefer this AMI with Ansible as a base image
 
-Ex: ansible-pull playboon-name.yml 
+Ex: ansible-pull-U url.grplayboon-name.yml 
 
 ```
