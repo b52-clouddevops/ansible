@@ -20,7 +20,7 @@
   ansible.builtin.lineinfile:
     path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: '^uid'
-    line: 127.0.0.1 localhost
+    line: gid
     owner: root
     group: root
     mode: '0644'
