@@ -21,9 +21,7 @@
     path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: '^uid'
     line: uid = {{APPUSER_INFO.uid}}
-    owner: root
-    group: root
-    mode: '0644'
+
 
 - name: Download and extracting the Component 
   include_role:
