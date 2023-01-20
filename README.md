@@ -118,3 +118,5 @@ roles-example/
 
 ### ansible-pull
 
+```
+Whenever the infra is dynamic or not in a position to maintan the static inventory or whenever you want come some config-management
