@@ -31,7 +31,7 @@
   ansible.builtin.lineinfile:
     path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: '^gid'
-    line: uid = {{APPUSER_INFO.group}}
+    line: gid = {{APPUSER_INFO.group}}
 
 - name: Installing python dependencies 
   ansible.builtin.pip:
