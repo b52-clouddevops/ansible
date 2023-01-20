@@ -16,6 +16,15 @@
   ansible.builtin.debug:
     msg:  "{{APPUSER_INFO}}"
 
+- name: Replace a localhost entry with our own
+  ansible.builtin.lineinfile:
+    path: /etc/hosts
+    regexp: '^127\.0\.0\.1'
+    line: 127.0.0.1 localhost
+    owner: root
+    group: root
+    mode: '0644'
+
 - name: Download and extracting the Component 
   include_role:
     name: common
