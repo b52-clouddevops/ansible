@@ -37,3 +37,11 @@
   ansible.builtin.pip:
     requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
     executable: pip3
+
+- name: Configuring Service
+  include_role:
+    name: common
+    tasks_from: config-svc
+
+- name: Set-Hostname
+  ansible.builtin.shell: set-hostname {{COMPONENT}} 
