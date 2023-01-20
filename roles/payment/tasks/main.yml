@@ -16,7 +16,6 @@
   ansible.builtin.debug:
     msg:  "{{APPUSER_INFO}}"
 
-
 - name: Download and extracting the Component 
   include_role:
     name: common
