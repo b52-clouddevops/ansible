@@ -25,7 +25,7 @@
 - name: Updating the GID in the ini file 
   ansible.builtin.lineinfile:
     path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
-    regexp: '^hid'
+    regexp: '^gid'
     line: uid = {{APPUSER_INFO.uid}}
 
 
