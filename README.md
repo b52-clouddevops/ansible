@@ -121,6 +121,8 @@ roles-example/
 ```
 Whenever the infra is dynamic or not in a position to maintan the static inventory or whenever you want come some config-management to happen as a part of the boot-strapping, prefer using ansible-pull. Ansible-pull expects ansible to be installed on the machine you're running.
 
-So, the easiest option is to install ANSIBLE on the lab ami and keep it
+So, the easiest option is to install ANSIBLE on the lab ami and keep it ready and prefer this AMI with Ansible as a base image
+
+
 
 ```
