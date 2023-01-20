@@ -1,4 +1,4 @@
-- name: Calling Maven Function
+- name: Calling Python Function
   include_role:
     name: common
     tasks_from: maven
