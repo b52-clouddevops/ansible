@@ -22,6 +22,12 @@
     regexp: '^uid'
     line: uid = {{APPUSER_INFO.uid}}
 
+- name: Updating the UID in the ini file 
+  ansible.builtin.lineinfile:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
+    regexp: '^uid'
+    line: uid = {{APPUSER_INFO.uid}}
+
 
 - name: Download and extracting the Component 
   include_role:
