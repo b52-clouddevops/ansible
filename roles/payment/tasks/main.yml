@@ -20,7 +20,19 @@
 - name: Download and extracting the Component 
   include_role:
     name: common
-    tasks_from: download 
+    tasks_from: download  
+
+- name: Updating the UID in the ini file 
+  ansible.builtin.lineinfile:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
+    regexp: '^uid'
+    line: uid = {{APPUSER_INFO.uid}}
+
+- name: Updating the GID in the ini file 
+  ansible.builtin.lineinfile:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
+    regexp: '^gid'
+    line: uid = {{APPUSER_INFO.group}}
 
 - name: Installing python dependencies 
   ansible.builtin.pip:
