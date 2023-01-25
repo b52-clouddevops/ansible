@@ -4,7 +4,7 @@ pipeline {
         SSH_CRED = credentials('SSH_CRED') 
     }
     stages {
-        stages('Lint Checks') {
+        stage('Lint Checks') {
             when { branch pattern: "feature-.*", comparator: "REGEXP" }
             steps {
                 sh "env"
