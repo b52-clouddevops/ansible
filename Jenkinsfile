@@ -5,7 +5,7 @@ pipeline {
     }
     stages {
         stages('Lint Checks') {
-            when { branch pattern: "feature-.*", comparator: "REGEXP"}
+            when { branch pattern: "feature-.*", comparator: "REGEXP" }
             steps {
                 sh "env"
                 sh "echo runs only on feature branch"
