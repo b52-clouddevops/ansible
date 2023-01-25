@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sh "env"
                 sh "Runs only aginst a PR"
-                sh "ansible-playbook robot-dryrun.yml -e COMPONENT=mongodb -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e ENV=dev"
+                sh "ansible-playbook robot-dryrun.yml -e COMPONENT=frontend -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e ENV=dev"
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
             when { branch 'main' }
             steps {
                 sh "env"
-                sh "echo MAIN Branch"
+                sh "echo Main Branch"
             }
         }
     }
