@@ -37,7 +37,6 @@ pipeline {
                 sh "echo $TAG_NAME"
             }
         }
-
     }
 }
 
