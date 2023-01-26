@@ -23,12 +23,21 @@ pipeline {
         }
 
         stage('Runs against Main') {
-            // when { branch 'main' }
+            when { branch 'main' }
             steps {
                 sh "env"
                 sh "echo Main Branch"
             }
         }
+
+        stage('Runs against Tag') {
+            when { expression TAG_NAME  ==~ ".*" }
+            steps {
+                sh "env"
+                sh "echo $TAG_NAME"
+            }
+        }
+
     }
 }
 
