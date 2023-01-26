@@ -31,7 +31,7 @@ pipeline {
         }
 
         stage('Runs against Tag') {
-            when { expression TAG_NAME  ==~ ".*" }
+            when {  env.TAG_NAME  ==~ ".*" }                       // TAG_NAME is an environment variable.
             steps {
                 sh "env"
                 sh "echo $TAG_NAME"
