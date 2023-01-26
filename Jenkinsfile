@@ -23,7 +23,7 @@ pipeline {
         }
 
         stage('Runs against Main') {
-            when { branch 'main' }
+            // when { branch 'main' }
             steps {
                 sh "env"
                 sh "echo Main Branch"
