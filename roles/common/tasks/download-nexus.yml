@@ -1,0 +1,22 @@
+- name: Cleanup of Old Content 
+  ansible.builtin.file:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/ 
+    state: absent  
+  ignore_errors: yes
+
+- name: Download and extracting the Component 
+  ansible.builtin.unarchive:
+    src: http://172.31.4.26:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
+    dest: /home/{{APPUSER}}/{{COMPONENT}}/
+    remote_src: yes 
+
+# - name: Copy files to the roboshop home directory
+#   ansible.builtin.copy:
+#     src: /tmp/{{COMPONENT}}-main/
+#     dest: /home/{{APPUSER}}/{{COMPONENT}}/
+#     remote_src: yes
+#     owner: "{{APPUSER}}"
+#     group: "{{APPUSER}}" 
+#   ignore_errors: yes 
+
+
