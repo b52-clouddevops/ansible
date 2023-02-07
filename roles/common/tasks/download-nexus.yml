@@ -9,13 +9,14 @@
     path: /home/{{APPUSER}}/{{COMPONENT}}
     state: directory
     mode: '0755'
+  become_user: "{{APPUSER}}"
 
 - name: Download and extracting the Component 
   ansible.builtin.unarchive:
     src: http://172.31.4.26:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
     dest: /home/{{APPUSER}}/{{COMPONENT}}/
     remote_src: yes 
-
+  become_user: "{{APPUSER}}"
 # - name: Copy files to the roboshop home directory
 #   ansible.builtin.copy:
 #     src: /tmp/{{COMPONENT}}-main/
