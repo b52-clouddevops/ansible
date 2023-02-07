@@ -16,9 +16,10 @@
     name: common
     tasks_from: download-nexus
 
-- name: Install node.js packages
-  community.general.npm:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/
+# Uncomment it only when you directly download it from the nexus.
+# - name: Install node.js packages
+#   community.general.npm:
+#     path: /home/{{APPUSER}}/{{COMPONENT}}/
 
 - name: Configuring Service
   include_role:
