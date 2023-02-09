@@ -3,17 +3,18 @@
     name: nginx
     state: present 
 
+- name: Clearning Old Html Content 
+  ansible.builtin.file:
+    path: /usr/share/nginx/html/
+    state: absent 
+  ignore_errors: yes
+
 - name: Creating App Directory
   ansible.builtin.file:
     path: /usr/share/nginx/html/
     state: directory
     mode: '0755'
   ignore_errors: yes
-
-- name: Clearning Old Html Content 
-  ansible.builtin.file:
-    path: /usr/share/nginx/html/
-    state: absent 
 
 - name: Download and extracting the Component 
   ansible.builtin.unarchive:
