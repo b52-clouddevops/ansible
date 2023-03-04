@@ -11,6 +11,14 @@
     name: common
     tasks_from: create-user
 
+- name: Download pem file
+  ansible.builtin.get_url:
+    url: https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+    dest: /home/roboshop/
+    mode: '0440'
+    owner: roboshop 
+    group: roboshop
+
 - name: Download and extracting the Component 
   include_role:
     name: common
