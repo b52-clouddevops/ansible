@@ -10,6 +10,8 @@ Environment=USER_HOST=user-{{ENV}}.roboshop.internal
 Environment=AMQP_HOST=rabbitmq-{{ENV}}.roboshop.internal
 Environment=AMQP_USER=roboshop
 Environment=AMQP_PASS=roboshop123
+Environment=USER_PORT=80
+Environment=CART_PORT=80
 
 ExecStart=/usr/local/bin/uwsgi --ini payment.ini
 SyslogIdentifier=payment
