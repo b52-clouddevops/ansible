@@ -1,0 +1,11 @@
+- name: Coping Logstash Config
+  ansible.builtin.template:
+    src: logstash.conf
+    dest: /etc/logstash/conf.d/logstash.conf
+
+- name: Restarting Logstash 
+  ansible.builtin.systemd:
+    state: restarted
+    name: logstash
+    daemon_reload: yes
+    enabled: true 
