@@ -41,5 +41,10 @@
     state: started
     enabled: true  
 
+- name: Installing filebeat
+  include_role:
+    name: elk
+    tasks_from: filebeat
+
 #  When frontend service has to be restarted ?
 #  Whenever there is a change in the roboshop.conf, only then I need a restart

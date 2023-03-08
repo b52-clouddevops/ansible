@@ -1,0 +1,12 @@
+# This is going to configure the rules needed to route the applicaiton logs
+- name: Coping rsyslog config 
+  ansible.builtin.template:
+    src: rsyslog.conf
+    dest: /etc/rsyslog.d/roboshop.conf
+
+- name: Restarting rsyslog
+  ansible.builtin.systemd:
+    state: restarted
+    name: rsyslog
+    daemon_reload: yes
+

@@ -39,5 +39,15 @@
     name: common
     tasks_from: config-svc
 
+- name: Configuring rsyslog
+  include_role:
+    name: elk
+    tasks_from: rsyslog
+
+- name: Installing filebeat
+  include_role:
+    name: elk
+    tasks_from: filebeat
+
 - name: Set-Hostname
   ansible.builtin.shell: set-hostname {{COMPONENT}} 
