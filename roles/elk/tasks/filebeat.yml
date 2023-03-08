@@ -1,3 +1,6 @@
+- name: Configuring the ublic signing key
+  ansible.builtin.shell: sudo rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch
+
 - name: Coping filebeat repo 
   ansible.builtin.template:
     src: elastic.repo
