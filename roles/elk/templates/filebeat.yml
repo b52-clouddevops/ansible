@@ -3,7 +3,6 @@ filebeat.inputs:
   enabled: true
   json.keys_under_root: true
 
-  # Paths that should be crawled and fetched. Glob based paths.
   paths:
     - "{{LOGLOCATION}}"
 
@@ -25,14 +24,7 @@ filebeat.config.modules:
 
 setup.template.settings:
   index.number_of_shards: 1
-  #index.codec: best_compression
-  #_source.enabled: false
 
-
-# =================================== Kibana ===================================
-
-# Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
-# This requires a Kibana endpoint configuration.
 setup.kibana:
 
   # Kibana Host
