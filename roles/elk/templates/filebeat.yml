@@ -7,7 +7,7 @@ filebeat.inputs:
     - "{{LOGLOCATION}}"
 
   fields:
-   component: "{{COMPONET}}"
+   component: "{{COMPONENT}}"
    logtype: json
 
 # ============================== Filebeat modules ==============================
