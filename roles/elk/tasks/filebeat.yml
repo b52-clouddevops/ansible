@@ -11,6 +11,11 @@
       name: filebeat
       state: present
 
+- name: Coping filebeat configuration 
+  ansible.builtin.template:
+    src: filebeat.yml
+    dest: /etc/filebeat/filebeat.yml
+
 - name: Start filebeat 
   ansible.builtin.systemd:
     state: restarted
