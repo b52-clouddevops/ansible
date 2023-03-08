@@ -5,10 +5,10 @@ filebeat.inputs:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    - /var/log/catalogue.log
+    - "{{LOGLOCATION}}"
 
   fields:
-   component: catalogue
+   component: "{{COMPONET}}"
    logtype: json
 
 # ============================== Filebeat modules ==============================
