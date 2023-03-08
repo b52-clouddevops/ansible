@@ -1,3 +1,4 @@
 APPUSER: roboshop
 COMPONENT: payment
 LOGLOCATION: /var/log/payment.log
+LOGTYPE: json

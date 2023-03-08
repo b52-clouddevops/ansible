@@ -1,3 +1,4 @@
 APPUSER: roboshop
 COMPONENT: catalogue
 LOGLOCATION: /var/log/catalogue.log
+LOGTYPE: json
