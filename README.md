@@ -127,3 +127,17 @@ Ex: ansible-pull-U https_git_repo_url playboon-name.yml
     ansible-pull -U https://github.com/b52-clouddevops/ansible.git -e COMPONENT=mongodb -e ENV=dev robot-pull.yml
 
 ```
+
+
+
+### Grok Patterns URL :
+
+```
+https://github.com/cjslack/grok-debugger/blob/master/public/patterns/grok-patterns
+```
+
+### Grok Debugger URL :
+
+```
+https://grokdebugger.com/
+```
