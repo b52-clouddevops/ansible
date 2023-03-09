@@ -29,16 +29,21 @@
 #     dest: /usr/share/nginx/html/ 
 #     remote_src: yes                        # Since the source is on a remote machine, ensure you mention remote_src as yes 
 
-- name: Coping Nginx Config 
+- name: Coping Nginx Proxy Config 
   ansible.builtin.template:                    # Copies the file from the files directory
     src: roboshop.conf  
     dest: /etc/nginx/default.d/roboshop.conf  
   notify: Restart Nginx                    #only when there is a change in the copy file, then only this handler will be called.
 
-- name: Starting frontend service 
+- name: Coping Nginx Config 
+  ansible.builtin.template:                    
+    src: nginx.conf  
+    dest: /etc/nginx/nginx.conf             
+
+- name: Retarting frontend service 
   ansible.builtin.service:
     name: nginx
-    state: started
+    state: restarted
     enabled: true  
 
 - name: Installing filebeat
