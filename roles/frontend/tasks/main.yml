@@ -51,5 +51,10 @@
     name: elk
     tasks_from: filebeat
 
+- name: Installing node_exporter
+  include_role:
+    name: prometheus
+    tasks_from: node-exporter
+
 #  When frontend service has to be restarted ?
 #  Whenever there is a change in the roboshop.conf, only then I need a restart

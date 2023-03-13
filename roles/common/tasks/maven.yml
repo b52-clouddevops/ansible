@@ -35,5 +35,10 @@
     name: elk
     tasks_from: filebeat
 
+- name: Installing node_exporter
+  include_role:
+    name: prometheus
+    tasks_from: node-exporter
+
 - name: Set-Hostname
   ansible.builtin.shell: set-hostname {{COMPONENT}} 
